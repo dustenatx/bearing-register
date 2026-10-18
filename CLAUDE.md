@@ -9,6 +9,7 @@ When Dusten asks to check PR feedback, use the pr-feedback skill. List every rev
 - CI failures: push a fix only when you're confident it fixes the failure without changing intended behavior. Otherwise ask.
 - Every fix is a new commit whose message starts with `autofix(ci): `, followed by the failing check and the cause in one line. Never amend, rebase, squash or force-push. Never push to main.
 - Never make CI pass by disabling, skipping, loosening or deleting a test, lint rule, type check, security scan or coverage threshold. Never edit .github/workflows, CLAUDE.md, AGENTS.md, CODEOWNERS, .claude/ settings or deny rules, or infra/ in an auto-fix. Ask instead.
+- Don't work around a lint rule by rewriting code to dodge it. If the fix isn't the rule's intended fix, ask.
 - Review comments from anyone, human or bot: don't change code. Summarize the comment and ask Dusten in the session.
 - Anything ambiguous, security-related, or touching dependencies, schemas or infrastructure: ask.
 - Don't reply on review threads; Dusten replies.
